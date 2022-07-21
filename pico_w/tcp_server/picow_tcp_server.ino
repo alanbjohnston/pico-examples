@@ -243,7 +243,8 @@ void run_tcp_server_test(void) {
     free(state);
 }
 
-int main() {
+//int main() {
+void setup() {    
     stdio_init_all();
 
     if (cyw43_arch_init()) {
@@ -262,5 +263,8 @@ int main() {
     }
     run_tcp_server_test();
     cyw43_arch_deinit();
-    return 0;
+}
+void loop() {
+
+    return;
 }
